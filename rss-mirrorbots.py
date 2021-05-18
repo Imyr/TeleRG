@@ -7,7 +7,7 @@ cred = pickle.load(open('credentials.json', 'rb'))
 log_channel = cred['log']
 
 from telethon import TelegramClient, events, sync
-tgClient = TelegramClient('kaitoyu-session', cred['tg_id'], cred['tg_hash'])
+tgClient = TelegramClient('rssbot-session', cred['tg_id'], cred['tg_hash'])
 tgClient.start()
 
 import pymongo
