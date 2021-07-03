@@ -3,7 +3,7 @@ from datetime import datetime
 import time
 
 import json
-cred = pickle.load(open('credentials.json', 'rb'))
+cred = json.load(open('credentials.json', 'rb'))
 log_channel = cred['log']
 
 from telethon import TelegramClient, events, sync
