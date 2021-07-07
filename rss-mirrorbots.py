@@ -37,7 +37,7 @@ def tg_mongo_run(dict_in_use, entry, time_grab):
                                         "</b> <code>" + entry.link + "</code> <b>\n\nName: </b><code>" +  
                                         entry.title + "</code><b>\nPublished: </b><code>" + 
                                         datetime.fromtimestamp(time.mktime(entry.published_parsed)).strftime("%Y-%m-%d %H:%M:%S") + 
-                                        '\n\n' + site_name + '</code>\ncc: shashwatverma')
+                                        '</code>\n\n<code>' + site_name + '</code>')
     stor_dict = {
             'Website' : site_name,
             'Time_Added' : time_grab,
