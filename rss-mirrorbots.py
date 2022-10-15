@@ -82,7 +82,7 @@ log_channel = cred['log']
 try:
     config_file = json.load(open('config.json','r'))
 except:
-    sys.exit("Couldn't open credentials.json.")    
+    sys.exit("Couldn't open config.json.")    
 
 tgClient = TelegramClient(sessions.StringSession(cred["session_string"]), cred['tg_id'], cred['tg_hash'])
 tgClient.start()
