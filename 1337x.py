@@ -122,4 +122,4 @@ while True:
     if stop:
         break
     print("Exiting sleep.")
-tgClient.send_message(log_channel, 'TeleRG exited gracefully.')
+tgClient.send_message(log_channel, '1337x-TeleRG exited gracefully.')
