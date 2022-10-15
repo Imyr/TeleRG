@@ -5,7 +5,7 @@ import signal
 import pymongo
 import feedparser
 from datetime import datetime
-from telethon import TelegramClient
+from telethon import TelegramClient, sessions
 
 def sigterm_handler(signum, frame):
     global run
@@ -84,7 +84,7 @@ try:
 except:
     sys.exit("Couldn't open credentials.json.")    
 
-tgClient = TelegramClient('rssbot-session', cred['tg_id'], cred['tg_hash'])
+tgClient = TelegramClient(sessions.StringSession(cred["session_string"]), cred['tg_id'], cred['tg_hash'])
 tgClient.start()
 tgClient.parse_mode = 'html'
 
